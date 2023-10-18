@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="azul-duoc">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="gris-duoc">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title id="titulo">Iniciar Sesión</ion-card-title>
+    </ion-card-header>
+    <ion-card-content id="contenido">
+      <form [formGroup]="formularioLogin">
+        <ion-item>
+          <ion-label position="floating" color="azul-duoc">Nombre de usuario</ion-label>
+          <ion-input type="text" formControlName="usuario"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating" color="azul-duoc">Contraseña</ion-label>
+          <ion-input type="password" formControlName="contraseña"></ion-input>
+        </ion-item>
+      </form>
+      <br>
+      <ion-button (click)="logear()" id="Ingresar" color="amarillo-duoc">
+        Ingresar
+      </ion-button>
+      <a id="link" color="azul-duoc" [routerLink]="['/registro']">¿Aún no tienes cuenta? Registrate aquí</a>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

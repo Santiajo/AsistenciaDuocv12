@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="azul-duoc">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="gris-duoc">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title id="titulo">Registrarse</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formularioRegistro">
+        <ion-item>
+          <ion-label position="floating" color="azul-duoc">Nombre de usuario</ion-label>
+          <ion-input type="text" formControlName="usuario"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating" color="azul-duoc">Correo electrónico</ion-label>
+          <ion-input type="email" formControlName="correo"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating" color="azul-duoc">Contraseña</ion-label>
+          <ion-input type="password" formControlName="contraseña"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating" color="azul-duoc">Confirmar contraseña</ion-label>
+          <ion-input type="password" formControlName="confirmarContraseña"></ion-input>
+        </ion-item>
+      </form>
+      <br>
+      <ion-button (click)="registrar()" id="Registrase" color="amarillo-duoc">
+        Registrarse
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="azul-duoc">
+    <ion-title>Personaje</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="hola" [fullscreen]="true">
+  
+  <div *ngIf="personaje">
+    <ion-card>
+      <ion-card-content class="ion-text-center">
+        <img src="{{ personaje.image }}">
+        <h1>{{ personaje.name}}</h1>
+        <h2>{{ personaje.species}}</h2>
+        <p>{{ personaje.gender}}</p>
+        <p>{{ personaje.status}}</p>
+        <p>{{ personaje.location.name}}</p>
+      </ion-card-content>
+
+    </ion-card>
+  </div>
+
+
+</ion-content>

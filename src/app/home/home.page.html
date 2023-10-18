@@ -1,0 +1,32 @@
+<ion-header *ngIf="!showContent" [translucent]="true">
+  <ion-toolbar color="azul-duoc">
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="!showContent" [class.transparent-background]="showContent" id="contenido" [fullscreen]="true"
+  color="gris-duoc">
+  <div id="centrado">
+    <div id="temperatura">
+      <ion-card >
+        <ion-item>
+          {{temperatura - 273.15 | number:'2.0'}} °C
+        </ion-item>
+      </ion-card>
+    </div>
+    <ion-title id="tituloPiola" color="azul-duoc">Bienvenido, {{ userr }}</ion-title>
+    <ion-button (click)="startScan()" class="botonn" color="amarillo-duoc">
+      Escanear Qr
+    </ion-button>
+    <ion-label color="azul-duoc">¿No se escanea tu código Qr? Genera tu código númerico aquí</ion-label>
+    <div class="codigo"></div>
+    <ion-button class="botonn" color="amarillo-duoc">
+      Generar código
+    </ion-button>
+    <ion-label color="azul-duoc">¿Ya generaste tu código? ¡Ingresalo aquí!</ion-label>
+    <input class="codigo" id="input" type="text" color="azul-duoc" placeholder="Ingresa tu codigo aquí">
+    <ion-button class="botonn" color="amarillo-duoc">
+      Enviar código
+    </ion-button>
+  </div>
+</ion-content>
